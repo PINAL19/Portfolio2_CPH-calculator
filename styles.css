@@ -1,0 +1,515 @@
+body {
+    background-color: #f58321;
+    color:black;
+    font-family: 'Open Sans', sans-serif;
+    border: black solid 2px;
+}
+
+h1 {
+    font-family: 'Lilita One', cursive;
+}
+
+.day1 {
+    display: flex;
+    flex-direction: row;
+    font-size: larger;
+}
+
+
+/* Formatting for mobile devices*/
+@media only screen and (max-width: 483px) {
+    /* Header and title section */
+    #title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+        font-size: 4vh;
+    }
+
+    #heading{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #logo {
+        width: 30vw;
+    }
+
+    .sub-title {
+        text-decoration: underline;
+        margin-left: 5vw;
+        padding-left: 2vw;
+    }
+
+    /* Table formatting */
+    #table {
+        padding-left: 16vw;
+        padding-bottom: 5vh;
+    }
+
+    /* Instructions section */
+    #instruction-box{
+        padding-left: 3vw;
+    }
+
+    /* Input hours section */
+    .days{
+        display: flex;
+        flex-direction: row;
+        padding-left: 15vw;
+    }
+
+
+    #hours-div {
+        display:flex;
+        flex-direction: row;
+    }
+
+    #hours_worked {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .hours_box{
+        width: 30vw;
+        height: 40px;
+        margin-left:20px;
+        margin-bottom:8px;
+        text-align:center;
+        font-size: large;
+    }
+
+    /* Commission section */
+    #comms{
+        display:flex;
+    }
+
+    #comms {
+        display: flex;
+        text-align:justify;
+        justify-content: center;
+        height:6vh;
+    }
+
+    #commission{
+        padding-right: 20px;
+    }
+
+    #number{
+        padding-left:10px;
+        padding-top: 3vh;
+        text-align:center;
+        font-size: large;
+        width: 25vw;
+    }
+
+    /* Working holiday visa section */
+    #visa-tax {
+        display: flex;
+        justify-content: center;
+        margin-top:20px;
+        padding-left: 10px;
+    }
+
+    #button{
+        height: 8vh;
+        width: 50vw;
+        margin-left: 25vw;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+        color:#f58321;
+        background-color: white;
+        font-size: 3vh;
+        border: black solid 3px;
+    }
+
+    /* Pay breakdown section */
+
+    #yourpay {
+        padding-left: 3vw;
+    }
+
+
+    #pay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border: black solid;
+        color:black;
+        font-family: 'Golos Text', sans-serif;
+    }
+
+    #yourpay{
+        margin-left:4vw;
+    }
+
+    #payscale {
+        margin-left: 5vw;
+    }
+
+    #daily {
+        padding-left: 15vw;
+    }
+
+    #bonus-breakdown {
+        padding-top: 3vh;
+        padding-left: 3vw;
+    }
+
+    #total-bonus {
+        padding-top: 3vh;
+        padding-left: 3vw;
+    }
+
+    #total-pay {
+        padding-left: 15vw;
+        padding-top: 5vh;
+
+    }
+}
+
+/* Formatting for tablet devices */
+
+@media only screen and (min-width:484px) and (max-width: 999px) {
+    /* Header and title section */
+    #heading{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10vw;
+        font-size: 4vh;
+    }
+
+    .sub-title {
+        text-decoration: underline;
+        margin-left: 5vw;
+        padding-left: 2vw;
+        font-size: 4vh;
+    }
+
+    /* Instructions section */
+    #instruction-box{
+        font-size:2.5vh;
+        margin-left:2vw;
+    }
+
+    /* Input hours section */
+
+    #table {
+        padding-left: 25vw;
+        padding-bottom: 10vh;
+    }
+
+    #hours-div {
+        display:flex;
+        flex-direction: row;
+    }
+
+    #hours_worked {
+        display:flex;
+        flex-direction: column;
+        margin-left: 15vw;
+        font-size:3vh;
+    }
+
+    #hours-container{
+        display:flex;
+        flex-direction: column;
+        padding-left: 10vw;
+    }
+
+    .hours_box{
+        width: 20vw;
+        height:5vh;
+        margin-bottom: 4.5vh;
+        margin-top: 0.5vh;
+        text-align:center;
+        font-size: large;
+    }
+
+    /* commission section */
+    #comms {
+        display: flex;
+        justify-content: center;
+    }
+
+    #commission {
+        font-size: 3.5vh;
+        padding-right: 5vw;
+        padding-bottom:1vh;
+    }
+
+    #number{
+        height: 8vh;
+        width: 30vw;
+        text-align:center;
+        font-size: large;
+    }
+
+    /* working holiday visa section */
+    #visa-tax {
+        display:flex;
+        flex-direction: row;
+        font-size: 3vh;
+        margin-left: 20vw;
+    }
+
+    #tickbox{
+        height: 8vh;
+        width: 10vw;
+        margin-left: 5vw;
+    }
+
+    #button {
+        height: 8vh;
+        width: 50vw;
+        margin-left: 25vw;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+        color:#f58321;
+        background-color: white;
+        font-size: 3vh;
+        border: black solid 3px;
+    }
+
+    /* Pay breakdown section */
+    #pay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border: black solid;
+        border-radius: 10%;
+        color:black;
+        font-family: 'Golos Text', sans-serif;
+    }
+
+    #yourpay{
+        margin-left:20vw;
+        font-size:4vh;
+    }
+
+    #payscale {
+        margin-left: 5vw;
+    }
+
+    #daily {
+        padding-left : 25vw;
+    }
+
+    #bonus-breakdown {
+        padding-left: 10vw;
+        padding-top: 3vh;
+    }
+
+    #total-bonus {
+        padding-left: 10vw;
+        padding-top: 3vh;
+    }
+
+    #total-pay {
+        padding-left: 20vw;
+        padding-top: 3vh;
+    }
+}
+
+/* Formatting for desktop */
+@media only screen and (min-width:1000px) {
+    #heading{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #logo {
+        width: 20vw;
+    }
+
+    #title {
+        font-size: 10vw;
+        padding-left: 10vw;
+    }
+
+    .sub-title {
+        text-decoration: underline;
+        margin-left: 5vw;
+        padding-left: 2vw;
+        font-size: 4vh;
+    }
+
+    /* Instructions section */
+
+    #instruction-box{
+        font-size:2.5vh;
+        margin-left:15vw;
+    }
+
+    #desktop-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5vw;
+    }
+
+    #desktop-flex {
+        display:flex;
+        flex-direction: column;
+    }
+
+    /* Hours worked section */
+    #hours-div {
+        display:flex;
+        flex-direction: row;
+    }
+
+    #hours_worked {
+        display:flex;
+        flex-direction: column;
+        font-size: 3vh;
+    }
+
+    #desktop-container{
+        display:flex;
+        flex-direction: row;
+    }
+
+    #hours-container {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        width:30vw;
+    }
+
+    .days{
+        margin-left: 2vw;
+    }
+
+    .hours_box {
+        height: 6vh;
+        width: 15vw;
+        margin-left:4vw;
+        margin-bottom: 4vh;
+        text-align:center;
+        font-size: large;
+    }
+
+    /* Commission section */
+    #comms {
+        display:flex;
+        flex-direction: row;
+        margin-left: 5vw;
+        margin-top: 10vh;
+    }
+
+    #commission {
+        font-size: 3vh;
+    }
+
+    #number{
+        margin-left: 2vw;
+        margin-right : 2vw;
+        height: 10vh;
+        width: 22vw;
+        text-align:center;
+        font-size: large;
+    }
+
+    #button {
+        height: 8vh;
+        width: 40vw;
+        margin-left: 25vw;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+        color:#f58321;
+        background-color: white;
+        font-size: 3vh;
+        border: black solid 3px;
+    }
+
+    /* Working holiday visa */
+    #visa-tax{
+        display: flex;
+        flex-direction: row;
+        margin-left: 8vw;
+        margin-top: 20vh;
+        font-size: 3vh;
+    }
+
+    #tickbox {
+        height: 6vh;
+        width: 6vw;
+        margin-top: 2vh;
+    }
+
+    #button {
+        height: 10vh;
+        width: 25vw;
+        margin-left: 15vw;
+        margin-top: 8vh;
+        color:#f58321;
+        background-color: white;
+        font-size: 3vh;
+        border: black solid 3px;
+    }
+
+    /* pay breakdown section */
+    #pay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border: black solid;
+        border-radius: 10%;
+        color:black;
+        font-family: 'Golos Text', sans-serif;
+    }
+
+    #yourpay{
+        margin-left:25vw;
+        font-size:4vh;
+    }
+
+    #payscale {
+        margin-left: 5vw;
+    }
+
+    #daily{
+        text-align:left;
+        padding-left: 25vw;
+    }
+
+    #sun-pay {
+        text-decoration: underline;
+    }
+
+    #bonus-breakdown {
+        padding-left: 10vw;
+        padding-top: 3vh;
+    }
+
+    #total-bonus {
+        padding-left: 10vw;
+        padding-top: 3vh;
+        
+    }
+
+    #total-pay {
+        text-align: center;
+        padding-top: 3vh;
+    }
+}
+
+/* Formatting for 404 Page */
+
+#errorpage{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+

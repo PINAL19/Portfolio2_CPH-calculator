@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&family=Lilita+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="keywords" content="happytravels, cph, commission per hour, pay calculator">
+    <meta name="description" content="A tool for calculating weekly pay check by factoring in hours worked and commission earned per hour">
+    <title>CPH calculator</title>
+</head>
+<body >
+    <header id="heading">
+        <img src="assets/images/happytravels.webp" id="logo" alt="HappyTravels company logo">
+        <h1 id="title">Pay Calculator</h1>
+    </header>
+
+
+    <h2 class="sub-title">Instructions for Use</h2>
+    <div id="instruction-box">
+        <ol>
+        <li>Insert your hours worked into the form</li>
+        <li>Insert your commission earned for the week</li>
+        <li>Select whether you are on a working holiday visa</li>
+        <li>View your pay breakdown at the bottom of the page</li>
+        </ol> 
+    </div>
+
+    <h2 class="sub-title">Hours worked</h2>
+    <div id="desktop-container">
+        <table id="table">
+            <tr>
+                <td><h3>Monday</h3></td>
+                <label for="monday-hours" aria-label="input for daily hours worked"></label>
+                <td><input type="number" name="monday" value="0" max="8" min="0" step="0.5" class="hours_box" id="monday-hours"></td>
+            </tr>
+            <tr>
+                <td><h3>Tuesday</h3></td>
+                <label for="tuesday-hours" aria-label="input for daily hours worked"></label>
+                <td><input type="number" name="tuesday" value="0" max="8" min="0" step="0.5" class="hours_box" id="tuesday-hours"></td>
+            </tr>
+            <tr>
+                <td><h3>Wednesday</h3></td>
+                <label for="wednesday-hours" aria-label="input for daily hours worked"></label>
+                <td><input type="number" name="wednesday" value="0" max="8" min="0" step="0.5" class="hours_box" id="wednesday-hours"></td>
+            </tr>
+            <tr>
+                <td><h3>Thursday</h3></td>
+                <label for="thursday-hours" aria-label="input for daily hours worked"></label>
+                <td><input type="number" name="thursday" value="0" max="8" min="0" step="0.5" class="hours_box" id="thursday-hours"></td>
+            </tr>
+            <tr>
+                <td><h3>Friday</h3></td>
+                <label for="friday-hours" aria-label="input for daily hours worked"></label>
+                <td><input type="number" name="friday" value="0" max="8" min="0" step="0.5" class="hours_box" id="friday-hours"></td>
+            </tr>
+            <tr>
+                <td><h3>Saturday</h3></td>
+                <label for="saturday-hours" aria-label="input for daily hours worked"></label>
+                <td><input type="number" name="saturday" value="0" max="8" min="0" step="0.5" class="hours_box" id="saturday-hours"></td>
+            </tr>
+            <tr>
+                <td><h3>Sunday</h3></td>
+                <label for="sunday-hours" aria-label="input for daily hours worked"></label>
+                <td><input type="number" name="sunday" value="0" max="8" min="0" step="0.5" class="hours_box" id="sunday-hours"></td>
+            </tr>
+        </table>
+       
+        
+        <div id="desktop-flex">
+            <div id="comms">
+                <h3 id="commission">Commission made</h3>
+                <form>
+                    <label for="number" aria-label="checkbox for whether you are on a working holiday tax bracket"></label>
+                    <input type="number" id="number">
+                </form>
+            </div>
+            
+            <div id="visa-tax">
+                <h3>Are you on a working holiday visa?</h3>
+                <form aria-label="checkbox for whether you are on a working holiday tax bracket">
+                    <label for="tickbox" aria-label="checkbox for whether you are on a working holiday tax bracket"></label>
+                    <input type="checkbox" id="tickbox" checked>
+                </form>
+            </div>
+
+            <div>
+                <button id="button">Calculate now!</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pay">
+        <h2 id="yourpay"> Your pay is $<span id="totalPayFinal"></span></h2>
+        <div id="daily">
+            <p> On Monday you earned :   $<span id="mon-pay"></span></p>
+            <p> On Tuesday you earned :  $<span id="tue-pay"></span></p>
+            <p> On Wednesday you earned :$<span id="wed-pay"></span></p>
+            <p> On Thursday you earned : $<span id="thur-pay"></span></p>
+            <p> On Friday you earned :   $<span id="fri-pay"></span></p>
+            <p> On Saturday you earned : $<span id="sat-pay"></span></p>
+            <p> On Sunday you earned :   $<span id="sun-pay"></span></p>
+            <p id="total-weekly-pay">Total weekly pay: $<span id="twp" class="totalPayFinal"></span></p>
+            <p> Your tax due this week was:  - <span id="week-tax"></span></p>
+        </div>
+        <div id="bonus-breakdown">
+            <p>Your total hours worked this week were: <span id="t-h-w"></span></p>
+
+            <p>You total commission earned this week was: $ <span id="t-c-e"></span></p>
+
+            <p> Your commission earned per hour was: $ <span id="commissionPerHour"></span></p>
+        </div>
+        <div id="total-bonus">
+            <p>This entitles you to a per hour bonus of: $ <span id="payBonus"></span></p>
+
+            <p> Your total bonus this week was: $<span id="monetaryBonus"></span> </p>
+        </div>
+    </div>
+
+
+<script src="assets/javascript/payscale.js"></script>
+<script src="assets/javascript/calculations.js"></script>
+
+</body>
+</html>
+
+    
